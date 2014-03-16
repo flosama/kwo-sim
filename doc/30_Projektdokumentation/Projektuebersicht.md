@@ -8,7 +8,7 @@ Big Picture
 
 # Problemdefinition
 ## Kontext
-Die Kraftwerke Oberhasli AG (KWO) sind ein wichtiger Teil der Schweizer Stromversorgung mit Hydroenergie mit Sitz in Innertkirchen. Derzeit unterhält die KWO neun Kraftwerke. Energie wird von Turbinen produziert, die mit Wasser von acht Speicherseen angetrieben werden, wobei der Niveauunterschied zwischen See und Kraftwerk genutzt wird. 
+Die Kraftwerke Oberhasli AG (KWO) sind ein wichtiger Teil der Schweizer Stromversorgung mit Sitz in Innertkirchen. Derzeit unterhält die KWO neun Wasserkraftwerke. Energie wird von Turbinen produziert, die mit Wasser von acht Speicherseen angetrieben werden, wobei der Niveauunterschied zwischen See und Kraftwerk genutzt wird. 
 
 Ein Teil der Seen wird als Pumpspeicher genutzt. Dabei wird Wasser in die Seen hinaufgepumpt, wenn ein Energieüberschuss besteht. Bei erhöhtem Energiebedarf wird es wieder zum Antrieb von Turbinen benutzt.
 
@@ -18,7 +18,8 @@ Die Tagesleistung ist bestimmt durch einen von den BKW Energie AG (BKW) vorgegeb
 ![Anlageschema der KWO](http://sinv-56018.edu.hsr.ch/attachments/2014/03/140316151415_anlageschema.png)
 > Analgeschema der KWO; Quelle: http://www.grimselstrom.ch/info/grimselstrom/kennzahlen-und-geschaeftsbericht/ (16.03.2014)
 
-Die Steuerung und Überwachung aller einzelnen Anlagen erfolgt dabei zentral im Kontrollzentrum in Innertkirchen. Das heisst: Alle Informationen aus den Kraftwerken wie z.B. Pegelstände der Seen, Aktivität der Turbinen, erzeugte Leistung etc. laufen hier zusammen. Ebenfalls wird das Ein- und Ausschalten von Anlagen (z.B. Öffnen und Schliessen von Druckwasserleitungen) und deren Regelung vom Kontrollzentrum gesteuert. Sämtliche Kommunikation läuft über einen redundant ausgelegten Steuer-Server mit einer angeschlosenen Visualisierungseinheit, die über das Kontrollzentrum bedient wird. Der Kommunikations-Endpunkt auf Kraftwerk-/Speichersee-Seite wird als "Automatisierungseinheit" bezeichent. Die Daten zwischen Kraftwerken/Speicherseen und Kontrollzentrum laufen über ein Netzwerk "Leittechnik", das von den übrigen Netzwerken für die Standard-Dienste (Geschäftsverkehr, Fileablage, Mail etc.) separiert ist. 
+Die Steuerung und Überwachung aller einzelnen Anlagen erfolgt dabei zentral im Kontrollzentrum in Innertkirchen. Das heisst: Alle Informationen aus den Kraftwerken wie z.B. Pegelstände der Seen, Aktivität der Turbinen, erzeugte Leistung etc. laufen hier zusammen. Ebenfalls wird das Ein- und Ausschalten von Anlagen (z.B. Öffnen und Schliessen von Druckwasserleitungen) und deren Regelung vom Kontrollzentrum gesteuert. Sämtliche Kommunikation läuft über einen redundant ausgelegten Steuer-Server mit einer angeschlosenen Visualisierungseinheit, die über das Kontrollzentrum bedient wird. Der Kommunikations-Endpunkt auf Kraftwerk-/Speichersee-Seite wird als "Automatisierungseinheit" bezeichent. Die Daten zwischen Kraftwerken/Speicherseen und Kontrollzentrum laufen über ein Netzwerk "Leittechnik", das von den Netzwerken für die übrigen Dienste (Telefonie, Mail etc.) separiert ist.
+
 Zur Übertragung der Daten sind LWL-Glasfaserleitungen von der Zentrale in Inntertkirchen zu allen Standorten verlegt.
 
 [*tbd: Picture Overview, Kommunikationspfad*]

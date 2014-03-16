@@ -106,7 +106,7 @@ Die Access- und Distributionnetzwerke sind am Corenetzwerk angeschlossen und geo
 #### Implementation
 
 * Routing von IP Traffic
-* OSPF mit Zonen
+* OSPF mit Areas
 * STP
 * ICMP für Pings
 * Einfache SNMP Abfragen (Availability)

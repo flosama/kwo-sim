@@ -49,14 +49,9 @@ Aus der Problembeschreibung ergibt sich folgender Auftrag: Die KWO will eine vol
      - Auswirkungen von Topologieänderungen
  4. Eventuell Änderungsvorschläge, falls grössere Mängel in der bisherigen Planung entdeckt werden
 
-Alle Punkte zu bewältigen ist sehr ambitiös. Deshalb müssen nur die ersten beiden Punkte implementiert werden, sprich das Model muss funktionieren. 
- 
-> - **Die Komponenten** beschreiben die einzelnen Teile des Netzwerkes, die im Modell umgesetzt werden müssen. 
-> - **Die Szenarien** beschreiben die Szenarien, die mit dem Modell getestet werden sollen.
+Alle Punkte zu bewältigen ist sehr ambitiös. Deshalb müssen nur die ersten beiden Punkte implementiert werden, sprich das Model muss funktionieren, damit die Projektarbeit als erfolgreich gilt.
 
-Für die Übertragung von Messdaten wird das Standardprotokoll für industrielle Automatisierung IEC 60870-5-104 verwendet. Dies werden wir nicht als solches, sondern wenn überhaupt, dann als TCP-Payload abbilden. Auch sonst werden wir keine eigenen Protokollimplementationen vornehmen.
-
-Voraussichtlich sind alle Simulationsszenarien kurzfristiger Natur, weshalb wir unsere Simulation auch daran orientiert implementieren werden. Einzig die Lastanalysen könnten unter Umständen in einer mehrtägigen / saisonal orientierten Simulation besser abgebildet werden.
+Das Projekt soll so aufgegleist werden, dass in den Nachfolgemonaten andere Personen (weitere Studenten in einer Nachfolgearbeit oder von der KWO selbst) das Projekt weiterführen können. Dies Bedingt, dass alle Teile gut und verständlich dokmentiert sind.
 
 ## Komponenten
 
@@ -69,6 +64,8 @@ Für alle Komponenten muss mindestens der grundlegende Protokollstack implementi
 * Ethernet
 * IP (mit statischer Konfiguration)
 * TCP Unterstützung
+
+Für die Übertragung von Messdaten wird das Standardprotokoll für industrielle Automatisierung IEC 60870-5-104 verwendet. Dies werden wir nicht als solches, sondern wenn überhaupt, dann als TCP-Payload abbilden. Auch sonst werden wir keine eigenen Protokollimplementationen vornehmen.
 
 ### Core Netzwerk
 
@@ -159,6 +156,8 @@ Die Visualisierungseinheiten sind die Schnittstellen zu den Personen in der Steu
 ## Szenarien
 
 Aus der Problembeschreibung und der Auswertung des Fragenkataloges ergibt sich, Welche Szenarien zu simulieren sind. Dabei wird angegeben, was getestet wird und was dabei gemssen werden soll.
+
+Voraussichtlich sind alle Simulationsszenarien kurzfristiger Natur, weshalb wir unsere Simulation auch daran orientiert implementieren werden. Einzig die Lastanalysen könnten unter Umständen in einer mehrtägigen / saisonal orientierten Simulation besser abgebildet werden.
 
 ### Allgemein
 

@@ -7,8 +7,13 @@ Big Picture
 ***tbd***
 
 # Problemdefinition
+## Kontext
 Die Kraftwerke Oberhasli AG (KWO) sind ein wichtiger Teil der Schweizer Stromversorgung mit Hydroenergie mit Sitz in Innertkirchen. Derzeit unterhält die KWO neun Kraftwerke. Energie wird von Turbinen produziert, die mit Wasser von acht Speicherseen angetrieben werden, wobei der Niveauunterschied zwischen See und Kraftwerk genutzt wird. 
+
+![Anlageschema der KWO](http://sinv-56018.edu.hsr.ch/attachments/2014/03/140316151415_anlageschema.png)
+
 Ein Teil der Seen wird als Pumpspeicher genutzt. Dabei wird Wasser in die Seen hinaufgepumpt, wenn ein Energieüberschuss besteht. Bei erhöhtem Energiebedarf wird es wieder zum Antrieb von Turbinen benutzt.
+
 Insgesamt liefern die Anlagen eine Leistung von 2350 GWh pro Jahr.
 Die Tagesleistung ist bestimmt durch einen von den BKW Energie AG (BKW) vorgegebenen Fahrplan. Die geforderte Leistung wird dabei auf alle Anlagen verteilt. Die Kraftwerke und Speicherseen liegen in alpinem Gelände in einem Umkreis von ca. 25 km [*tbc*]. 
 

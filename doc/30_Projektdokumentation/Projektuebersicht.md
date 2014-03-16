@@ -33,7 +33,7 @@ Die Anlagen der KWO werden laufend erneuert und ausgebaut. So sind derzeit 3 wei
 
 Am **08.12.2014** bietet sich der KWO anlässlich der Abschaltung aller Kraftwerke die seltene Gelegenheit, ausserbetriebliche Tests am realen Netzwerk durchzuführen. Da das Zeitfenster für die Abschaltung auf einen Tag beschränkt ist, müssen dafür die signifikanten Tests vorab identifiziert werden können.
 
-Somit ist für die KWO ist ein Instrument von Vorteil, mit dem sich einerseits Änderungen an der Netzwerk-Infrastruktur vorab auf ihre Auswirkungen prüfen lassen. Andrerseits soll dieses Instrument Netzwerk-Tests in einem risikofreien Umfeld ermöglichen und eine Priorisierung der kritischen und aussägekräftigsten Testes liefern. Mit der Abbildung des Leittechnik-Netwerks in einer Simulation soll dieses Instrument im Rahmen der vorliegenden Bachelor-Arbeit zur Verfügung gestellt werden.
+Somit ist für die KWO ist ein Instrument von Vorteil, mit dem sich einerseits Änderungen an der Netzwerk-Infrastruktur vorab auf ihre Auswirkungen prüfen lassen. Andrerseits soll dieses Instrument Netzwerk-Tests in einem risikofreien Umfeld ermöglichen und damit eine Priorisierung der kritischen und aussägekräftigsten Tests liefern, die dann auf dem realen Netzwerk durchgeführt werden können. Mit der Abbildung des Leittechnik-Netwerks in einer Simulation soll dieses Instrument im Rahmen der vorliegenden Bachelor-Arbeit zur Verfügung gestellt werden.
 
 
 # Anforderungen
@@ -89,7 +89,7 @@ Im Core Netzwerk gibt es einen Pfad, welcher über eine Richtstrahlverbindung fu
 #### Implementation
 
 * Routing von IP Traffic
-* OSPF mit Zonen
+* OSPF mit Areas
 * ICMP für Pings
 * Einfache SNMP Abfragen (Availability)
 

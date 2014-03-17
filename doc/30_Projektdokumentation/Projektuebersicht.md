@@ -13,7 +13,8 @@ Die Kraftwerke Oberhasli AG (KWO) sind ein wichtiger Teil der Schweizer Stromver
 Ein Teil der Seen wird als Pumpspeicher genutzt. Dabei wird Wasser in die Seen hinaufgepumpt, wenn ein Energieüberschuss besteht. Bei erhöhtem Energiebedarf wird es wieder zum Antrieb von Turbinen benutzt.
 
 Insgesamt liefern die Anlagen eine Leistung von 2350 GWh pro Jahr.
-Die Tagesleistung ist bestimmt durch einen von den BKW Energie AG (BKW) vorgegebenen Fahrplan. Die geforderte Leistung wird dabei auf alle Anlagen verteilt. Die Kraftwerke und Speicherseen liegen in alpinem Gelände in einem Umkreis von ca. 25 km [*tbc*]. 
+Die Tagesleistung ist bestimmt durch einen von den BKW Energie AG (BKW) vorgegebenen Fahrplan. Die geforderte Leistung wird dabei auf alle Anlagen verteilt. Die Kraftwerke und Speicherseen liegen in alpinem Gelände in einem Umkreis von ca. 25 km.
+[tbc ?]
 
 ![Anlageschema der KWO](http://sinv-56018.edu.hsr.ch/attachments/2014/03/140316151415_anlageschema.png)
 > Analgeschema der KWO; Quelle: http://www.grimselstrom.ch/info/grimselstrom/kennzahlen-und-geschaeftsbericht/ (16.03.2014)
@@ -26,14 +27,16 @@ Zur Übertragung der Daten sind LWL-Glasfaserleitungen von der Zentrale in Innte
 
 [Abb.???, Picture Overview] zeigt, dass sich der hauptsächliche Kommunikationspfad in diesem Netzwerk zwischen Kraftwerk- und Speichersee-Standorten zur Zentrale bewegt. Die Kommunikationspfade zwischen den Kraftwerk-Standorten untereinander ist vernachlässigbar.
 
-Das Leittechnik-Netzwerk ist für das Kerngeschäft der KWO von zentraler Bedeutung. Dessen unterbruchsfreie Funktion ist Bedingung für die Stromproduktion, da die Steuerung aller Kraftwerke über dieses Netzwerk erfolgt. Bereits ein kurzer Verbindungsverlust zu einer Automatisierungseinheit führt dazu, dass die angeschlossenen Maschinen nicht mehr steuerbar sind und weder ein- noch ausgeschaltet werden können. Da die Stromproduktion zudem in einem 24/7-Betrieb erfolgt, sind Netzwerk-Tests auserhalb der Produktionszeit grundsätzlich nicht möglich.
+Das Leittechnik-Netzwerk ist für das Kerngeschäft der KWO von zentraler Bedeutung. Dessen unterbruchsfreie Funktion ist Bedingung für die Stromproduktion, da die Steuerung aller Kraftwerke über dieses Netzwerk erfolgt. Bereits ein kurzer Verbindungsverlust von 5s zu einer Automatisierungseinheit führt dazu, dass die angeschlossenen Maschinen nicht mehr steuerbar sind und weder ein- noch ausgeschaltet werden können. Da die Stromproduktion zudem in einem 24/7-Betrieb erfolgt, sind Netzwerk-Tests auserhalb der Produktionszeit grundsätzlich nicht möglich.
 
 ## Problem
 Die Anlagen der KWO werden laufend erneuert und ausgebaut. So sind derzeit 3 weitere Kraftwerke in Planung und Bau. Jede Erweiterung der Anlagen zieht auch einen Ausbau des Leittechnik-Netzwerks nach sich, der in das bestehende System integriert werden muss, ohne den laufenden Betrieb zu stören. Aus Netzwerk-Perspektive bedeutet jede Erweiterung einerseits eine Erhöhnung der variablen Netzlast aufgrund von zusätzlichen Knoten, die Verkehr genereieren. Andrerseits wird mit damit aber auch die Grundlast des Netzwerks angehoben, d.h. der Verkehr, der durch Protokolle generiert wird, die das Funktionieren des Netzwerks selbst notwendig sind.
 
+Ausserdem ist, insbesondere im Hinblick auf die 2019 bevorstehende Abschaltung des AKWs Mühleberg, eine Erweiterung um je ein Biomasse- und ein Geothermiekraftwerk geplant. Dies würde, sofern diese Projekte realisiert werden, das Leittechniknetz nochmals stärker belasten und die Komplexität ebenfalls erhöhen.
+
 Am **08.12.2014** bietet sich der KWO anlässlich der Abschaltung aller Kraftwerke die seltene Gelegenheit, ausserbetriebliche Tests am realen Netzwerk durchzuführen. Da das Zeitfenster für die Abschaltung auf einen Tag beschränkt ist, müssen dafür die signifikanten Tests vorab identifiziert werden können.
 
-Somit ist für die KWO ist ein Instrument von Vorteil, mit dem sich einerseits Änderungen an der Netzwerk-Infrastruktur vorab auf ihre Auswirkungen prüfen lassen. Andrerseits soll dieses Instrument Netzwerk-Tests in einem risikofreien Umfeld ermöglichen und damit eine Priorisierung der kritischen und aussägekräftigsten Tests liefern, die dann auf dem realen Netzwerk durchgeführt werden können. Mit der Abbildung des Leittechnik-Netwerks in einer Simulation soll dieses Instrument im Rahmen der vorliegenden Bachelor-Arbeit zur Verfügung gestellt werden.
+Somit ist für die KWO ist ein Instrument von Vorteil, mit dem sich Änderungen an der Netzwerk-Infrastruktur vorab auf ihre Auswirkungen prüfen lassen. Ebenfalls soll dieses Instrument Netzwerk-Tests in einem risikofreien Umfeld ermöglichen und damit eine Priorisierung der kritischsten und aussägekräftigsten Tests liefern, die dann auf dem realen Netzwerk durchgeführt werden können. Mit der Abbildung des Leittechnik-Netwerks in einer Simulation soll dieses Instrument im Rahmen der vorliegenden Bachelor-Arbeit zur Verfügung gestellt werden.
 
 
 # Anforderungen

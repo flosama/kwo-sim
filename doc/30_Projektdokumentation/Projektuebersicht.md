@@ -14,7 +14,6 @@ Ein Teil der Seen wird als Pumpspeicher genutzt. Dabei wird Wasser in die Seen h
 
 Insgesamt liefern die Anlagen eine Leistung von 2350 GWh pro Jahr.
 Die Tagesleistung ist bestimmt durch einen von den BKW Energie AG (BKW) vorgegebenen Fahrplan. Die geforderte Leistung wird dabei auf alle Anlagen verteilt. Die Kraftwerke und Speicherseen liegen in alpinem Gelände in einem Umkreis von ca. 25 km.
-[tbc ?]
 
 ![Anlageschema der KWO](http://sinv-56018.edu.hsr.ch/attachments/2014/03/140316151415_anlageschema.png)
 > Analgeschema der KWO; Quelle: http://www.grimselstrom.ch/info/grimselstrom/kennzahlen-und-geschaeftsbericht/ (16.03.2014)

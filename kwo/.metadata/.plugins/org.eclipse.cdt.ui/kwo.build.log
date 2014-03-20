@@ -1,0 +1,9 @@
+13:52:04 **** Build of configuration gcc-debug for project kwo ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory `/c/devel/omnet/kwo/kwo/src'
+Creating executable: ../out/gcc-debug/src/kwo.exe
+make[1]: Leaving directory `/c/devel/omnet/kwo/kwo/src'
+
+13:52:05 Build Finished (took 823ms)
+

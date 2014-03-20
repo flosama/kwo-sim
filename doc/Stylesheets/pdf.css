@@ -1,0 +1,16 @@
+p {
+  line-height: 180%;
+  text-align: justify;
+}
+
+h1 {
+  page-break-before:always;
+}
+
+h1:first-child {
+  page-break-before:never;
+}
+
+img {
+  max-width: 100%;
+}

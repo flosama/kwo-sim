@@ -1,5 +1,4 @@
 
-
 article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}
 audio,canvas,video{display:inline-block}
 audio:not([controls]){display:none;height:0}
@@ -1219,5 +1218,19 @@ kbd{padding:0.1em 0.6em;border:1px solid rgba(0,0,0,0.25);-webkit-box-shadow:0 1
 body.rtl #wmd-input,body.rtl #preview-contents,body.rtl .input-file-title,body.rtl .search-bar input,body.rtl .modal-document-manager input,body.rtl .container{direction:rtl}
 body.pdf{font-family:"DejaVu Sans"}body.pdf code,body.pdf pre{font-family:"DejaVu Sans Mono"}
 
-img {display:block;max-width:100%;height:auto;}
-p {line-height:1.75em;)
+p, body.pdf p {
+  line-height: 180%;
+  text-align: justify;
+}
+
+h1 {
+  page-break-before:always;
+}
+
+h1:first-child {
+  page-break-before:never;
+}
+
+img {
+  max-width: 100%;
+}

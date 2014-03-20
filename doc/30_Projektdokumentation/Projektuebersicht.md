@@ -41,18 +41,20 @@ Somit ist für die KWO ist ein Instrument von Vorteil, mit dem sich Änderungen 
 # Anforderungen
 Aus der Problembeschreibung ergibt sich folgender Auftrag: Die KWO will eine vollständige und funktionstüchtige Abbildung ihres Leittechniknetzes in Form einer OmNet++ Simulation. In dieser Simulation sollen Szenarien aufgesetzt und getestet werden, welche gezielt auf die Kernprobleme dieses Netzwerkes eingehen. Insbesondere sind damit die Konvergenzzeiten von OSPF und STP gemeint, sowie auch allgemeine Lastsimulationen mit Verluststatistiken und die Möglichkeit, geplante Änderungen vorab zu simulieren.
 
- 1. Abbildung des gesamten Leittechniknetzwerkes
- 2. Konfiguration der verwendeten Protokolle, insbesondere:
-     - OSPF
-     - STP
-     - TCP/IP
- 3. Erstellung von geeigneten Simulationsszenarien, um folgende Eigenschaften zu überprüfen (in absteigender Priorität):
-     - Konvergierungszeiten
-     - Lastverhalten / Datenverlust
-     - Auswirkungen von Topologieänderungen
- 4. Eventuell Änderungsvorschläge, falls grössere Mängel in der bisherigen Planung entdeckt werden
+Das Vorgehen soll sich an folgenden Prioritäten orientieren:
 
-Alle Punkte zu bewältigen ist sehr ambitiös. Deshalb müssen nur die ersten beiden Punkte implementiert werden, sprich das Model muss funktionieren, damit die Projektarbeit als erfolgreich gilt.
+ 1. Abbildung des gesamten Leittechniknetzwerkes (**Komponenten**)
+     1. Core Netzwerk
+     2. Distribution- und Accessnetzwerke
+     3. Server
+     4. Automatisiertungseinheiten
+     5. Visualisierungseinheiten
+ 2. Erstellung von geeigneten Simulationsszenarien, um folgende Eigenschaften zu überprüfen (**Szenarien**):
+     * Konvergierungszeiten
+     * Lastverhalten / Datenverlust
+     * Auswirkungen von Topologieänderungen
+
+Alle Punkte zu bewältigen ist sehr ambitiös. Deshalb muss nur der erste der beiden Punkte implementiert werden, sprich das Modell muss funktionieren. Die einzelnen Teile der Vorgehensliste werden in den nächsten Abschnitten im Detail behandelt. 
 
 Das Projekt soll so aufgegleist werden, dass in den Nachfolgemonaten andere Personen (weitere Studenten in einer Nachfolgearbeit oder von der KWO selbst) das Projekt weiterführen können. Dies Bedingt, dass alle Teile gut und verständlich dokmentiert sind.
 

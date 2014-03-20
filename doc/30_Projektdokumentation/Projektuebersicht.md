@@ -22,7 +22,8 @@ Die Steuerung und Überwachung aller einzelnen Anlagen erfolgt dabei zentral im 
 
 Zur Übertragung der Daten sind LWL-Glasfaserleitungen von der Zentrale in Inntertkirchen zu allen Standorten verlegt.
 
-[*tbd: Picture Overview, Kommunikationspfad*]
+![](http://sinv-56018.edu.hsr.ch/attachments/2014/03/140320122421_c84f30cce820469cde75c69caede1c11.png)
+> Kommunikationspfad, stark abstrahiert.
 
 [Abb.???, Picture Overview] zeigt, dass sich der hauptsächliche Kommunikationspfad in diesem Netzwerk zwischen Kraftwerk- und Speichersee-Standorten zur Zentrale bewegt. Die Kommunikationspfade zwischen den Kraftwerk-Standorten untereinander ist vernachlässigbar.
 

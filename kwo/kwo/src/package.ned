@@ -6,7 +6,7 @@ import inet.util.ThruputMeteringChannel;
 
 @license(LGPL);
 
-channel GBitLH extends ThruputMeteringChannel
+channel LWL_1GBit extends ThruputMeteringChannel
 {
     delay = 0.1us;
     datarate = 1Gbps;
@@ -14,7 +14,7 @@ channel GBitLH extends ThruputMeteringChannel
     @display("ls=red");
 }
 
-channel GBitCo extends ThruputMeteringChannel
+channel CU_1GBit extends ThruputMeteringChannel
 {
     delay = 1us;
     datarate = 1Gbps;
@@ -22,7 +22,7 @@ channel GBitCo extends ThruputMeteringChannel
     @display("ls=blue");
 }
 
-channel FunkVB extends ThruputMeteringChannel
+channel UHF_50MBit extends ThruputMeteringChannel
 {
     delay = 1ms;
     datarate = 50 Mbps;
@@ -69,18 +69,18 @@ network leittechnicknetz_kwo
     connections:
 
         // Core mesh connections
-        Core_Gri.ethg++ <--> GBitLH <--> Core_UST.ethg++;
-        Core_Gri.ethg++ <--> GBitLH <--> Core_Han.ethg++;
-        Core_Gri.ethg++ <--> FunkVB <--> Core_BG.ethg++;
-        Core_Han.ethg++ <--> GBitLH <--> Core_BG.ethg++;
-        Core_Han.ethg++ <--> GBitLH <--> Core_UST.ethg++;
-        Core_UST.ethg++ <--> GBitLH <--> Core_BG.ethg++;
+        Core_Gri.ethg++ <--> LWL_1GBit <--> Core_UST.ethg++;
+        Core_Gri.ethg++ <--> LWL_1GBit <--> Core_Han.ethg++;
+        Core_Gri.ethg++ <--> UHF_50MBit <--> Core_BG.ethg++;
+        Core_Han.ethg++ <--> LWL_1GBit <--> Core_BG.ethg++;
+        Core_Han.ethg++ <--> LWL_1GBit <--> Core_UST.ethg++;
+        Core_UST.ethg++ <--> LWL_1GBit <--> Core_BG.ethg++;
 
         // Connections to other network parts
-        Core_Gri.ethg++ <--> GBitLH <--> distr_gri2.gri2b;
-        Core_Han.ethg++ <--> GBitLH <--> distr_gri2.gri2a;
-        Core_Gri.ethg++ <--> GBitLH <--> distr_han.disthanB;
-        Core_Han.ethg++ <--> GBitLH <--> distr_han.disthanA;
+        Core_Gri.ethg++ <--> LWL_1GBit <--> distr_gri2.gri2b;
+        Core_Han.ethg++ <--> LWL_1GBit <--> distr_gri2.gri2a;
+        Core_Gri.ethg++ <--> LWL_1GBit <--> distr_han.disthanB;
+        Core_Han.ethg++ <--> LWL_1GBit <--> distr_han.disthanA;
 }
 
 module distribution_grimsel_2
@@ -105,9 +105,9 @@ module distribution_grimsel_2
         }
 
     connections:
-        gri2_A.ethg++ <--> GBitLH <--> gri2_B.ethg++;
-        gri2_A.ethg++ <--> GBitLH <--> gri2a;
-        gri2_B.ethg++ <--> GBitLH <--> gri2b;
+        gri2_A.ethg++ <--> LWL_1GBit <--> gri2_B.ethg++;
+        gri2_A.ethg++ <--> LWL_1GBit <--> gri2a;
+        gri2_B.ethg++ <--> LWL_1GBit <--> gri2b;
 }
 
 
@@ -133,9 +133,9 @@ module distribution_handeck
         }
 
     connections:
-        Dist_Han_A.ethg++ <--> GBitLH <--> Dist_Han_B.ethg++;
-        Dist_Han_A.ethg++ <--> GBitLH <--> disthanA;
-        Dist_Han_B.ethg++ <--> GBitLH <--> disthanB;
+        Dist_Han_A.ethg++ <--> LWL_1GBit <--> Dist_Han_B.ethg++;
+        Dist_Han_A.ethg++ <--> LWL_1GBit <--> disthanA;
+        Dist_Han_B.ethg++ <--> LWL_1GBit <--> disthanB;
 }
 
 module distribution_handeck_2

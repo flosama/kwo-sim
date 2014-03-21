@@ -1,0 +1,168 @@
+package kwo;
+
+import inet.nodes.ospfv2.OSPFRouter;
+import inet.util.ThruputMeteringChannel;
+
+
+@license(LGPL);
+
+channel GBitLH extends ThruputMeteringChannel
+{
+    delay = 0.1us;
+    datarate = 1Gbps;
+    thruputDisplayFormat = "#N";
+    @display("ls=red");
+}
+
+channel FunkVB extends ThruputMeteringChannel
+{
+    delay = 1ms;
+    datarate = 50 Mbps;
+    thruputDisplayFormat = "#N";
+    @display("ls=yellow");
+}
+
+network leittechnicknetz_kwo
+{
+    submodules:
+        core_leittechnik: core_leittechnik;
+        distribution_grimsel_2: distribution_grimsel_2;
+        distribution_handeck: distribution_handeck;
+        
+    connections:
+        // Inter-Segment connections
+        core_leittechnik[gri] <--> GBitLH <--> distribution_grimsel_2[gri2B];
+}
+
+module core_leittechnik
+{
+	gates:
+    	inout gri;
+    	inout han;
+    	inout ust;
+    	inout bg;
+    	
+    submodules:
+        // Core-Switches
+        Core_Gri: OSPFRouter {
+            parameters:
+                @display("p=100,100");
+            gates:
+                ethg[8];
+        }
+        Core_Han: OSPFRouter {
+            parameters:
+                @display("p=250,100");
+            gates:
+                ethg[8];
+        }
+        Core_UST: OSPFRouter {
+            parameters:
+                @display("p=100,250");
+            gates:
+                ethg[8];
+        }
+        Core_BG: OSPFRouter {
+            parameters:
+                @display("p=250,250");
+            gates:
+                ethg[8];
+        }
+
+    connections:
+
+        // Core mesh connections
+        Core_Gri.ethg++ <--> GBitLH <--> Core_UST.ethg++;
+        Core_Gri.ethg++ <--> GBitLH <--> Core_Han.ethg++;
+        Core_Gri.ethg++ <--> FunkVB <--> Core_BG.ethg++;
+        Core_Han.ethg++ <--> GBitLH <--> Core_BG.ethg++;
+        Core_Han.ethg++ <--> GBitLH <--> Core_UST.ethg++;
+        Core_UST.ethg++ <--> GBitLH <--> Core_BG.ethg++;
+        
+        // Connections to other network parts
+        Core_Gri.ethg++ <--> GBitLH <--> gri;
+        Core_Han.ethg++ <--> GBitLH <--> han;
+        Core_UST.ethg++ <--> GBitLH <--> ust;
+        Core_BG.ethg++  <--> GBitLH <--> bg;
+}
+
+network distribution_grimsel_2
+{
+    submodules:
+
+        gri2_A: OSPFRouter {
+            parameters:
+                @display("p=100,100");
+            gates:
+                ethg[8];
+        }
+
+        gri2_B: OSPFRouter {
+            parameters:
+                @display("p=250,100");
+            gates:
+                ethg[8];
+        }
+
+    connections:
+        gri2_A.ethg++ <--> GBitLH <--> gri2_B.ethg++;
+}
+
+
+network distribution_handeck
+{
+}
+
+network distribution_handeck_2
+{
+}
+
+network distribution_handeck_3
+{
+}
+
+network distribution_innertkirchen
+{
+}
+
+network access_innertkirchen
+{
+}
+
+network access_innertkirchen_2
+{
+}
+
+network access_innertkirchen_sa150
+{
+}
+
+network access_vis
+{
+}
+
+network access_gadmental
+{
+}
+
+network access_grimsel_sa220
+{
+}
+
+network access_grimsel
+{
+}
+
+network access_grimsel_2
+{
+}
+
+network access_handeck_2
+{
+}
+
+network access_ust_sa16
+{
+}
+
+

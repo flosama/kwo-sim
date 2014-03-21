@@ -1,3 +1,0 @@
-package kwo;
-
-@license(LGPL);

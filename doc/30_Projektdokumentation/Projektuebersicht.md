@@ -14,6 +14,7 @@ Ein Teil der Seen wird als Pumpspeicher genutzt. Dabei wird Wasser in die Seen h
 
 Insgesamt liefern die Anlagen eine Leistung von 2350 GWh pro Jahr.
 Die Tagesleistung ist bestimmt durch einen von den BKW Energie AG (BKW) vorgegebenen Fahrplan. Die geforderte Leistung wird dabei auf alle Anlagen verteilt. Die Kraftwerke und Speicherseen liegen in alpinem Gelände in einem Umkreis von ca. 25 km.
+[tbc ?]
 
 ![Anlageschema der KWO](http://sinv-56018.edu.hsr.ch/attachments/2014/03/140316151415_anlageschema.png)
 > Analgeschema der KWO; Quelle: http://www.grimselstrom.ch/info/grimselstrom/kennzahlen-und-geschaeftsbericht/ (16.03.2014)
@@ -22,8 +23,7 @@ Die Steuerung und Überwachung aller einzelnen Anlagen erfolgt dabei zentral im 
 
 Zur Übertragung der Daten sind LWL-Glasfaserleitungen von der Zentrale in Inntertkirchen zu allen Standorten verlegt.
 
-![](http://sinv-56018.edu.hsr.ch/attachments/2014/03/140320122421_c84f30cce820469cde75c69caede1c11.png)
-> Kommunikationspfad, stark abstrahiert.
+[*tbd: Picture Overview, Kommunikationspfad*]
 
 [Abb.???, Picture Overview] zeigt, dass sich der hauptsächliche Kommunikationspfad in diesem Netzwerk zwischen Kraftwerk- und Speichersee-Standorten zur Zentrale bewegt. Die Kommunikationspfade zwischen den Kraftwerk-Standorten untereinander ist vernachlässigbar.
 
@@ -36,26 +36,24 @@ Ausserdem ist, insbesondere im Hinblick auf die 2019 bevorstehende Abschaltung d
 
 Am **08.12.2014** bietet sich der KWO anlässlich der Abschaltung aller Kraftwerke die seltene Gelegenheit, ausserbetriebliche Tests am realen Netzwerk durchzuführen. Da das Zeitfenster für die Abschaltung auf einen Tag beschränkt ist, müssen dafür die signifikanten Tests vorab identifiziert werden können.
 
-Somit ist für die KWO ist ein Instrument von Vorteil, mit dem sich Änderungen an der Netzwerk-Infrastruktur vorab auf ihre Auswirkungen prüfen lassen. Ebenfalls soll dieses Instrument Netzwerk-Tests in einem risikofreien Umfeld ermöglichen und damit eine Priorisierung der kritischsten und aussägekräftigsten Tests liefern, die dann auf dem realen Netzwerk durchgeführt werden können. Mit der Abbildung des Leittechnik-Netwerks in einer Simulation soll dieses Instrument im Rahmen der vorliegenden Bachelor-Arbeit zur Verfügung gestellt werden.
+Somit ist für die KWO ein Instrument von Vorteil, mit welchem sich Änderungen an der Netzwerk-Infrastruktur im vornherein auf ihre Auswirkungen prüfen lassen. Die Simulation ermöglicht Netzwerk-Tests in einem risikofreien Umfeld und kann damit eine Priorisierung der kritischsten und aussägekräftigsten Tests liefern, die dann auf dem realen Netzwerk durchgeführt werden können. Gleichzeitig kann man mit gezielten Tests, welche man zuvor bereits simuliert hat, eine konkrete Validierung des Simulationsmodells, speziell auf die potentiellen Schwachstellen sowohl des Netzwerkes als auch des Simulationsmodells ausgerichtet, vornehmen. Mit der Abbildung des Leittechnik-Netwerks in einer Simulation soll dieses Instrument im Rahmen der vorliegenden Bachelor-Arbeit zur Verfügung gestellt werden.
 
 
 # Anforderungen
 Aus der Problembeschreibung ergibt sich folgender Auftrag: Die KWO will eine vollständige und funktionstüchtige Abbildung ihres Leittechniknetzes in Form einer OmNet++ Simulation. In dieser Simulation sollen Szenarien aufgesetzt und getestet werden, welche gezielt auf die Kernprobleme dieses Netzwerkes eingehen. Insbesondere sind damit die Konvergenzzeiten von OSPF und STP gemeint, sowie auch allgemeine Lastsimulationen mit Verluststatistiken und die Möglichkeit, geplante Änderungen vorab zu simulieren.
 
-Das Vorgehen soll sich an folgenden Prioritäten orientieren:
+ 1. Abbildung des gesamten Leittechniknetzwerkes
+ 2. Konfiguration der verwendeten Protokolle, insbesondere:
+     - OSPF
+     - STP
+     - TCP/IP
+ 3. Erstellung von geeigneten Simulationsszenarien, um folgende Eigenschaften zu überprüfen (in absteigender Priorität):
+     - Konvergierungszeiten
+     - Lastverhalten / Datenverlust
+     - Auswirkungen von Topologieänderungen
+ 4. Eventuell Änderungsvorschläge, falls grössere Mängel in der bisherigen Planung entdeckt werden
 
- 1. Abbildung des gesamten Leittechniknetzwerkes (**Komponenten**)
-     1. Core Netzwerk
-     2. Distribution- und Accessnetzwerke
-     3. Server
-     4. Automatisiertungseinheiten
-     5. Visualisierungseinheiten
- 2. Erstellung von geeigneten Simulationsszenarien, um folgende Eigenschaften zu überprüfen (**Szenarien**):
-     * Konvergierungszeiten
-     * Lastverhalten / Datenverlust
-     * Auswirkungen von Topologieänderungen
-
-Alle Punkte zu bewältigen ist sehr ambitiös. Deshalb muss nur der erste der beiden Punkte implementiert werden, sprich das Modell muss funktionieren. Die einzelnen Teile der Vorgehensliste werden in den nächsten Abschnitten im Detail behandelt. 
+Alle Punkte zu bewältigen ist sehr ambitiös. Deshalb müssen nur die ersten beiden Punkte implementiert werden, sprich das Model muss funktionieren, damit die Projektarbeit als erfolgreich gilt.
 
 Das Projekt soll so aufgegleist werden, dass in den Nachfolgemonaten andere Personen (weitere Studenten in einer Nachfolgearbeit oder von der KWO selbst) das Projekt weiterführen können. Dies Bedingt, dass alle Teile gut und verständlich dokmentiert sind.
 
@@ -163,7 +161,7 @@ Die Visualisierungseinheiten sind die Schnittstellen zu den Personen in der Steu
 
 Aus der Problembeschreibung und der Auswertung des Fragenkataloges ergibt sich, Welche Szenarien zu simulieren sind. Dabei wird angegeben, was getestet wird und was dabei gemssen werden soll.
 
-Voraussichtlich sind alle Simulationsszenarien kurzfristiger Natur, weshalb wir unsere Simulation auch daran orientiert implementieren werden. Einzig die Lastanalysen könnten unter Umständen in einer mehrtägigen / saisonal orientierten Simulation besser abgebildet werden.
+Voraussichtlich sind alle Simulationsszenarien kurzfristiger Natur, sprich die Simulationsdauer wird sich im Sekundenbereich bewegen. Deshalb werden wir unsere Simulation auch daran orientiert implementieren, also mehr Wert darauf legen, dass sich genaue Resultate aus diesen kurzen Simulationen ableiten lassen. Einzig die Lastanalysen könnten unter Umständen in einer mehrtägigen / saisonal orientierten Simulation besser abgebildet werden.
 
 ### Allgemein
 
